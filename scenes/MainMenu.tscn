@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/scriptsMainMenu.gd" type="Script" id=1]
 [ext_resource path="res://graphics/title_bg.png" type="Texture" id=2]
 [ext_resource path="res://fonts/BigButtonFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/components/DialogBox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -129,6 +130,12 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 stretch_mode = 0
+
+[node name="DialogBox" parent="." instance=ExtResource( 4 )]
+anchor_top = 1.0
+margin_top = -131.0
+margin_right = 0.0
+margin_bottom = -1.0
 
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_NewGame_pressed"]
